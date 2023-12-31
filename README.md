@@ -18,6 +18,11 @@ Four discrete actions are available, corresponding to:
 
 The task is episodic, and in order to solve the environment, the agent must get an average score of +13 over 100 consecutive episodes.
 
+On this repository you will find the following:
+* Navigation.ipynb: Contains all the code that was used to successfully trained an agent that was able to solve this environment.
+* checkpoint.pth: The saved model weights of the successful agent.
+* Report.pdf: Provides a description of the implementation.
+
 **Note: The project environment is similar to, but not identical to the Banana Collector environment on the Unity ML-Agents GitHub page.**
 <br>
 <br>
@@ -82,7 +87,7 @@ Then, place the file in the p1_navigation/ folder from cloned Udacity GitHub rep
 <br>
 ## Getting Started
 Once the Python environment has been setup, all dependencies were installed and the Banana environment has been downloaded then you should be ready to get started to interact with the Banana environment and train your agent.
-To do this, open the Navigation.ipynb within the cloned Udacity repository and run the code cells to get familiar with interacting with the environment.
+To do this, open the Navigation.ipynb within the cloned Udacity repository and run the code cells to get familiar on how to interact with the environment.
 
 **Note: Before running code in a notebook, don't forget to change the kernel to match the `drlnd` environment by using the drop-down `Kernel` menu:**
 
