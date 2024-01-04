@@ -51,7 +51,7 @@ cd Value-based-methods/python
 pip install .
 ```
 The above code will try to install all packages under \Value-based-methods\python\requirements.txt. 
-If you run into any issues when trying to install torch==0.4.0 then you can alternative install torch by running the below code:
+If you run into any issues when trying to install torch==0.4.0 then you can instead install torch by running the below code:
 ```
 pip install torch===0.4.0 -f https://download.pytorch.org/whl/torch_stable.html
 ```
