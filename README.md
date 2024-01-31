@@ -1,29 +1,23 @@
 # deep-reinforcement-learning-dqn
 
 ## Project Overview
-I have worked on this project as part of the Udacity's Deep Reinforcement Learning Nanodegree program. The goal is to train an agent to navigate a large square world to collect yellow bananas while avoiding blue bananas.
-This world, which we refer to as environment, is provided by Unity Machine Learning Agents (ML-Agents) - an open-source Unity plugin that enables games and simulations to serve as environments for training intelligent agents.
+I have worked on this project as part of the Udacity's Deep Reinforcement Learning Nanodegree program. The goal is to train a group of agenta to maintain its position at the target location for as many time steps as possible.
+The environment is provided by Unity Machine Learning Agents (ML-Agents) - an open-source Unity plugin that enables games and simulations to serve as environments for training intelligent agents. 
+For this particular implementation, I have decided to use an environment that contains 20 identical agents.
 
-![Alt](/images/banana-world.png)
+![Alt](/images/reacher.environment.png)
 
-A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana. Thus, the goal of the agent is to collect as many yellow bananas as possible while avoiding blue bananas.
+A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of each agent is to maintain its position at the target location for as many time steps as possible.
 
-The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around the agent's forward direction. Given this information, the agent has to learn how to best select actions. 
-Four discrete actions are available, corresponding to:
+The observation space consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. Each action is a vector with four numbers, corresponding to torque applicable to two joints. Every entry in the action vector should be a number between -1 and 1.
 
-* 0 - move forward.
-* 1 - move backward.
-* 2 - turn left.
-* 3 - turn right.
-
-The task is episodic, and in order to solve the environment, the agent must get an average score of +13 over 100 consecutive episodes.
+The task is episodic, and in order to solve the environment, the agents must get an average score of +30 (over 100 consecutive episodes, and over all agents).
 
 On this repository you will find the following:
-* Navigation.ipynb: Contains all the code that was used to successfully trained an agent that was able to solve this environment.
-* checkpoint.pth: The saved model weights of the successful agent.
+* Continuous_Control.ipynb: Contains all the code that was used to successfully trained the agents that were able to solve this environment.
+* checkpoint_actor_ddpg.pth: The saved model weights for the actor neural network.
+* checkpoint_critic_ddpg.pth: The saved model weights for the critic neural network.
 * Report.pdf: Provides a description of the implementation.
-
-**Note: The project environment is similar to, but not identical to the Banana Collector environment on the Unity ML-Agents GitHub page.**
 <br>
 <br>
 <br>
@@ -76,24 +70,24 @@ python -m ipykernel install --user --name drlnd --display-name "drlnd"
 For this project, you will not need to install Unity - this is because Udacity has built the environment for you, and you can download it from one of the links below.
 You need only select the environment that matches your operating system:
 
-* Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
-* Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
-* Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
-* Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
+* Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Linux.zip)
+* Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher.app.zip)
+* Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86.zip)
+* Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Windows_x86_64.zip)
 
-Then, place the file in the p1_navigation/ folder from cloned Udacity GitHub repository, and unzip (or decompress) the file.
+Then, place the file in the p2_continuous-control/ folder from cloned Udacity GitHub repository, and unzip (or decompress) the file.
 <br>
 <br>
 <br>
 ## Getting Started
-Once the Python environment has been setup, all dependencies were installed and the Banana environment has been downloaded then you should be ready to get started to interact with the Banana environment and train your agent.
-To do this, open the Navigation.ipynb within the cloned Udacity repository and run the code cells to get familiar on how to interact with the environment.
+Once the Python environment has been setup, all dependencies were installed and the Reacher environment has been downloaded then you should be ready to get started to interact with the environment and train your agents.
+To do this, open the Continuous_Control.ipynb within the cloned Udacity repository and run the code cells to get familiar on how to interact with the environment.
 
 **Note: Before running code in a notebook, don't forget to change the kernel to match the `drlnd` environment by using the drop-down `Kernel` menu:**
 
 ![Alt](/images/ipynb-kernel.png)
 
-Alternatively, you can download the Navigation.ipynb from this repository into your locally cloned version of the Udacity repository which will give you an overview of a successfully trained agent.
+Alternatively, you can download the Continuous_Control.ipynb from this repository into your locally cloned version of the Udacity repository which will give you an overview of a successfully DDPG implementation.
 Hopefully this will give you a starting point to make your own adjustments.
 
 
