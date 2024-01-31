@@ -1,4 +1,4 @@
-# deep-reinforcement-learning-navigation
+# deep-reinforcement-learning-dqn
 
 ## Project Overview
 I have worked on this project as part of the Udacity's Deep Reinforcement Learning Nanodegree program. The goal is to train an agent to navigate a large square world to collect yellow bananas while avoiding blue bananas.
